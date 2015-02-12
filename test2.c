@@ -36,7 +36,7 @@ int WINAPI WinMain(HINSTANCE hInst, HINSTANCE hPrevInst, LPSTR pCmdLine, int sho
     // create window
     hWnd = CreateWindow(
             wc.lpszClassName,
-            _T("はじめてのウインドウ"),  // title bar strings
+            _T("縺ｯ縺倥ａ縺ｦ縺ｮ繧ｦ繧､繝ｳ繝峨え"),  // title bar strings
             WS_OVERLAPPEDWINDOW,   // window type
             CW_USEDEFAULT,         // window positin (x)
             CW_USEDEFAULT,         //  window positin (y)
