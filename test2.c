@@ -10,7 +10,7 @@ int WINAPI WinMain(HINSTANCE hInst, HINSTANCE hPrevInst, LPSTR pCmdLine, int sho
     HWND hWnd;
     MSG msg;
 
-    // initialize window class
+    /* initialize window class */
     wc.cbSize = sizeof(wc);
     wc.style = CS_HREDRAW | CS_VREDRAW;
     wc.lpfnWndProc = WndProc;
@@ -30,10 +30,10 @@ int WINAPI WinMain(HINSTANCE hInst, HINSTANCE hPrevInst, LPSTR pCmdLine, int sho
     wc.lpszMenuName = NULL;
     wc.lpszClassName = _T("Default Class Name");
 
-    // register window class
+    /* register window class */
     if (RegisterClassEx(&wc) == 0) { return 1; }
 
-    // create window
+    /* create window */
     hWnd = CreateWindow(
             wc.lpszClassName,
             _T("はじめてのウインドウ"),  // title bar strings
