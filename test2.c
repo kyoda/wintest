@@ -71,11 +71,15 @@ int WINAPI WinMain(HINSTANCE hInst, HINSTANCE hPrevInst, LPSTR pCmdLine, int sho
 
 LRESULT CALLBACK WndProc(HWND hWnd, UINT msg, WPARAM wp, LPARAM lp)
 {
-    switch (msg)
-    {
+    switch (msg) {
+
+        case WM_CLOSE:
+            break;
+
         case WM_DESTROY:
             PostQuitMessage(0);
             return 0;
+
     }
 
     return DefWindowProc(hWnd, msg, wp, lp);
