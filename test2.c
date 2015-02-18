@@ -71,7 +71,23 @@ int WINAPI WinMain(HINSTANCE hInst, HINSTANCE hPrevInst, LPSTR pCmdLine, int sho
 
 LRESULT CALLBACK WndProc(HWND hWnd, UINT msg, WPARAM wp, LPARAM lp)
 {
+    static HMENU hMenu;
+    int wmId;
+
     switch (msg) {
+
+        case WM_CREATE:
+            hMenu = LoadMenu(NULL, "WIN_MENU");
+            SetMenu(hWnd, hMenu);
+            return 0;
+
+        case WM_COMMAND:
+            wmId = LOWORD(wp);
+            switch (wmId) {
+                case 40013:
+                    MessageBox(NULL, "ver0.01","バージョン情報", MB_OK);
+            }
+            break;
 
         case WM_CLOSE:
             break;
