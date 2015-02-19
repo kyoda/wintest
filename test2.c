@@ -84,8 +84,12 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT msg, WPARAM wp, LPARAM lp)
         case WM_COMMAND:
             wmId = LOWORD(wp);
             switch (wmId) {
+                case 40012:
+                    MessageBox(NULL, "使い方：ボタンを押す","help", MB_OK);
+                    break;
                 case 40013:
                     MessageBox(NULL, "ver0.01","バージョン情報", MB_OK);
+                    break;
             }
             break;
 
