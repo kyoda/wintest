@@ -84,6 +84,15 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT msg, WPARAM wp, LPARAM lp)
         case WM_COMMAND:
             wmId = LOWORD(wp);
             switch (wmId) {
+                case 40008:
+                    MessageBox(NULL, "イ","サブメニュー", MB_OK);
+                    break;
+                case 40009:
+                    MessageBox(NULL, "ロ","サブメニュー", MB_OK);
+                    break;
+                case 40010:
+                    MessageBox(NULL, "ハ","サブメニュー", MB_OK);
+                    break;
                 case 40012:
                     MessageBox(NULL, "使い方：ボタンを押す","help", MB_OK);
                     break;
